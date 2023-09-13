@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-color Changer</title>
+</head>
+<style>
+    body{
+        margin-top: 100px;
+    }
+    h1{
+        text-align: center;
+        text-shadow: 1px 1px red;
+        font-size: 35px;
+        text-decoration: dotted;
+        color: black;
+       
+        
+    }
+    img{
+        align-items:center ;
+        margin-left: 580px;
+        width: 350px;
+        height: 350px;
+    }
+    #switch{
+        text-align: right;
+        margin-right: 50px;
+    }
+    .btn{
+               border: 2px solid gray;
+               border-radius: 50%;
+               width: 30px;
+               height: 30px;
+               cursor:pointer;
+               
+    }
+    .btn:hover{
+        transform: scale(1.1);
+    }
+    #white{
+            background-color: aliceblue;
+    }
+    #black{
+         background-color: black;
+    }
+</style>
+<body>
+    <div id="switch">
+        <button class="btn" id="white" onclick="changeGB('#FFFFFF')"></button>
+       
+        <button class="btn" id="black" onclick="changeGB('#000000')"></button>
+    </div>
+    <h1 class="text">Darsan Raval </h1>
+    <img src="https://i.pinimg.com/originals/9c/35/8e/9c358e0aa1791ad5bd729a1c57f760aa.jpg" alt="">
+    <script>
+        function changeGB(color){
+           document.body.style.backgroundColor=color;
+
+           let txt= document.getElementsByClassName("text");
+        if(color=="#000000"){
+            for(let elm of txt){
+                elm.style.color="white";
+            }
+        }else{
+            for(let elm of txt){
+                elm.style.color="black";
+            }
+
+        }
+       
+        }
+    
+        
+    </script>
+</body>
+</html>
